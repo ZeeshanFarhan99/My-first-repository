@@ -1,0 +1,154 @@
+//SCIENTIFIC CALCULATOR
+//A) BASIC OPERATIONS
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    int sum, difference, product;
+    float quotient;
+
+    // Getting input from the user
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+
+    // Performing the operations
+    sum = num1 + num2;
+    difference = num1 - num2;
+    product = num1 * num2;
+    quotient = (float)num1 / num2;
+
+    // Displaying the results
+    printf("\n--- Results ---\n");
+    printf("Sum: %d\n", sum);
+    printf("Difference: %d\n", difference);
+    printf("Product: %d\n", product);
+    printf("Quotient: %.2f\n", quotient);
+
+    return 0;
+}
+//B)TRIGONOMETRIC OPERATIONS
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double angle;
+    double sine, cosine, tangent;
+    double arcsine, arccosine, arctangent;
+
+    // Getting input from the user
+    printf("Enter the angle in degrees: ");
+    scanf("%lf", &angle);
+
+    // Converting angle from degrees to radians
+    double radian = angle * M_PI / 180.0;
+
+    // Performing the trigonometric operations
+    sine = sin(radian);
+    cosine = cos(radian);
+    tangent = tan(radian);
+    arcsine = asin(sine);
+    arccosine = acos(cosine);
+    arctangent = atan(tangent);
+
+    // Displaying the results
+    printf("\n--- Results ---\n");
+    printf("Sine: %.4lf\n", sine);
+    printf("Cosine: %.4lf\n", cosine);
+    printf("Tangent: %.4lf\n", tangent);
+    printf("Arcsine: %.4lf\n", arcsine);
+    printf("Arccosine: %.4lf\n", arccosine);
+    printf("Arctangent: %.4lf\n", arctangent);
+
+    return 0;
+}
+//C)/ALGEBRAIC OPERATIONS
+#include <stdio.h>
+#include <math.h>
+
+// Function to calculate factorial
+int factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main() {
+    int base, exponent, n;
+    double num, squareRoot, cubeRoot, nthRoot, absoluteValue;
+
+    // Getting input from the user
+    printf("Enter the base for exponentiation: ");
+    scanf("%d", &base);
+
+    printf("Enter the exponent for exponentiation: ");
+    scanf("%d", &exponent);
+
+    printf("Enter a number for square root: ");
+    scanf("%lf", &num);
+
+    printf("Enter a number for cube root: ");
+    scanf("%lf", &num);
+
+    printf("Enter the value of n for nth root: ");
+    scanf("%d", &n);
+
+    printf("Enter a number for absolute value: ");
+    scanf("%lf", &num);
+
+    // Performing the algebraic operations
+    double result = pow(base, exponent);
+    squareRoot = sqrt(num);
+    cubeRoot = cbrt(num);
+    nthRoot = pow(num, 1.0 / n);
+    absoluteValue = fabs(num);
+
+    // Displaying the results
+    printf("\n--- Results ---\n");
+    printf("Exponentiation: %.2lf\n", result);
+    printf("Square Root: %.2lf\n", squareRoot);
+    printf("Cube Root: %.2lf\n", cubeRoot);
+    printf("Nth Root: %.2lf\n", nthRoot);
+    printf("Factorial: %d\n", factorial(n));
+    printf("Absolute Value: %.2lf\n", absoluteValue);
+
+    return 0;
+}
+//D)LOGARITHMIC OPERATIONS
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double num;
+    double log10Value, naturalLogValue, customLogValue;
+    double base;
+
+    // Getting input from the user
+    printf("Enter a number for logarithm (base 10): ");
+    scanf("%lf", &num);
+
+    printf("Enter a number for natural logarithm (base e): ");
+    scanf("%lf", &num);
+
+    printf("Enter a number for custom base logarithm: ");
+    scanf("%lf", &num);
+
+    printf("Enter the base for custom base logarithm: ");
+    scanf("%lf", &base);
+
+    // Performing the logarithmic operations
+    log10Value = log10(num);
+    naturalLogValue = log(num);
+    customLogValue = log(num) / log(base);
+
+    // Displaying the results
+    printf("\n--- Results ---\n");
+    printf("Logarithm (base 10): %.4lf\n", log10Value);
+    printf("Natural Logarithm (base e): %.4lf\n", naturalLogValue);
+    printf("Custom Base Logarithm: %.4lf\n", customLogValue);
+
+    return 0;
+}
